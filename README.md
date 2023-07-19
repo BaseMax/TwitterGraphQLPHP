@@ -50,9 +50,9 @@ The Twitter Clone API provides the following queries and mutations:
 
 ### Queries
 
-- `user(username: String!): User: Get a user's profile information by their username.
-- `tweet(id: ID!): Tweet: Get a specific tweet by its ID.
-- `timeline(userId: ID!): [Tweet!]!: Get the user's timeline (tweets from the users they follow).
+- `user(username: String!): User`: Get a user's profile information by their username.
+- `tweet(id: ID!): Tweet`: Get a specific tweet by its ID.
+- `timeline(userId: ID!): [Tweet!]!`: Get the user's timeline (tweets from the users they follow).
 
 ### Mutations
 
