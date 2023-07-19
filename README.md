@@ -63,6 +63,40 @@ The Twitter Clone API provides the following queries and mutations:
 - `likeTweet(tweetId: ID!): Tweet`: Like a tweet.
 - `unlikeTweet(tweetId: ID!): Tweet`: Remove a like from a previously liked tweet.
 - `retweet(tweetId: ID!): Tweet`: Retweet a tweet.
-- `deleteTweet(tweetId: ID!): Boolean`: Delete a
+- `deleteTweet(tweetId: ID!): Boolean`: Delete a tweet.
+
+## Authentication
+
+To perform certain mutations, such as creating tweets, following users, liking tweets, or retweeting, you need to authenticate your requests. Please include an authentication token in the request headers using the following format:
+
+```makefile
+Authorization: Bearer YOUR_AUTH_TOKEN
+```
+
+The API uses JWT (JSON Web Tokens) for authentication. To obtain an authentication token, you can use the login mutation, passing your username and password as input, and it will return a token that you can use for subsequent requests.
+
+## Error Handling
+
+The API handles errors using GraphQL's built-in error handling mechanisms. If an error occurs, the API will provide meaningful error messages with relevant details.
+
+## Caching
+
+To improve performance, the API utilizes Redis caching for certain queries and data. Cached data will be served when available, reducing the load on the database.
+
+## Testing
+
+The API comes with a suite of unit tests and integration tests. To run the tests, execute the following command:
+
+```bash
+phpunit
+```
+
+## Documentation
+
+For more information on the API's schema, queries, and mutations, you can access the GraphQL documentation tool at http://localhost:8000/graphql-playground after starting the development server.
+
+## Contribution
+
+Contributions to the Twitter Clone API project are welcome.
 
 Copyright 2023, Max Base
