@@ -206,6 +206,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer YOUR_
 ![Screenshot from 2023-07-22 17-26-50](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/32a82d3d-9d48-4c91-bb90-a1a3c9681716)
 ![Screenshot from 2023-07-22 17-36-35](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/a57959f6-bdd6-4fbc-9f32-001aca4bb6c7)
 ![Screenshot from 2023-07-22 17-42-20](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/a1b834f9-0b80-4f46-a646-d0bbdefe1d0e)
+![Screenshot from 2023-07-22 18-10-35](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/2bb0fbeb-2f89-4c97-ab19-ed4b32a43ac0)
 
 
 Make sure to replace YOUR_API_URL with the actual URL of your GraphQL API endpoint and YOUR_AUTH_TOKEN with a valid authentication token obtained from the login mutation, if required.
