@@ -91,6 +91,49 @@ The API comes with a suite of unit tests and integration tests. To run the tests
 phpunit
 ```
 
+## GraphQL Models
+
+```graphql
+type User {
+  id: ID!
+  username: String!
+  name: String!
+}
+
+type Tweet {
+  id: ID!
+  text: String!
+  author: User!
+}
+
+input CreateUserInput {
+  username: String!
+  password: String!
+  name: String!
+}
+
+input CreateTweetInput {
+  text: String!
+}
+
+type Query {
+  user(username: String!): User
+  tweet(id: ID!): Tweet
+  timeline(userId: ID!): [Tweet!]!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!): User
+  createTweet(input: CreateTweetInput!): Tweet
+  followUser(userId: ID!): User
+  unfollowUser(userId: ID!): User
+  likeTweet(tweetId: ID!): Tweet
+  unlikeTweet(tweetId: ID!): Tweet
+  retweet(tweetId: ID!): Tweet
+  deleteTweet(tweetId: ID!): Boolean
+}
+```
+
 ## cURL Testing
 
 ### Query: user(username: String!): User
