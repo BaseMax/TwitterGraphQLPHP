@@ -9,7 +9,6 @@ This project aims to create a Twitter clone API using GraphQL in PHP8. The API w
 - PHP 8 or higher
 - Composer (Dependency Manager for PHP)
 - MySQL or any compatible database server
-- Redis (for caching)
 
 ## Installation
 
@@ -35,13 +34,13 @@ Set up the database:
 Run database migrations to set up the required tables:
 
 ```bash
-php artisan migrate
+php migrate.php
 ```
 
 Start the development server:
 
 ```bash
-php -S localhost:8000 -t public
+php -S localhost:8000 public/index.php
 ```
 
 ## GraphQL Schema
@@ -60,9 +59,9 @@ The Twitter Clone API provides the following queries and mutations:
 - `createTweet(input: CreateTweetInput!): Tweet`: Create a new tweet.
 - `followUser(userId: ID!): User`: Follow another user.
 - `unfollowUser(userId: ID!): User`: Unfollow a previously followed user.
-- `likeTweet(tweetId: ID!): Tweet`: Like a tweet.
-- `unlikeTweet(tweetId: ID!): Tweet`: Remove a like from a previously liked tweet.
-- `retweet(tweetId: ID!): Tweet`: Retweet a tweet.
+- `likeTweet(tweetId: ID!, userId: ID!): Tweet`: Like a tweet.
+- `unlikeTweet(tweetId: ID!, userId: ID!): Tweet`: Remove a like from a previously liked tweet.
+- `retweet(tweetId: ID!, userId: ID!): Tweet`: Retweet a tweet.
 - `deleteTweet(tweetId: ID!): Boolean`: Delete a tweet.
 
 ## Authentication
@@ -223,4 +222,4 @@ For more information on the API's schema, queries, and mutations, you can access
 
 Contributions to the Twitter Clone API project are welcome.
 
-Copyright 2023, Max Base
+Copyright 2023, Max Base, Ali Ahmadi
