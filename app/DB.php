@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\User;
 use PDO;
 
 class DB
@@ -43,5 +44,22 @@ class DB
         $stmt->execute([$id]);
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function createUser(array $data, PDO $db): User|null
+    {
+        $id = uniqid();
+        $stmt = $db->prepare(
+            "INSERT INTO users (id, name, username) VALUES (?, ?, ?)"
+        );
+        $stmt->execute([
+            $id,
+            $data["name"],
+            $data["username"]
+        ]);
+
+        $user = self::getUserById($id, $db);
+
+        return User::createUser($id, $user["username"], $user["name"]);
     }
 }

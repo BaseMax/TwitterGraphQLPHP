@@ -136,11 +136,12 @@ $mutationType = new ObjectType([
             ],
             "resolve" => function ($rootValue, $args, $context) {
                 $input = $args["input"];
+                $user = DB::createUser($input, $context["db"]);
+
                 return [
-                    "username" => $input["username"],
-                    "name" => $input["name"],
-                    "id" => uniqid(),
-                    "password" => $input["password"]
+                    "id" => $user->getId(),
+                    "name" => $user->getName(),
+                    "username" => $user->getUsername()
                 ];
             }
         ],
