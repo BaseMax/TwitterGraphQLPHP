@@ -186,6 +186,12 @@ $mutationType = new ObjectType([
                 ]
             ],
             "resolve" => function ($rootValue, $args, $context) {
+                $user = DB::getUserById($args["userId"], $context["db"]);
+                return [
+                    "id" => $user["id"],
+                    "name" => $user["name"],
+                    "username" => $user["username"]
+                ];
             }
         ],
         "likeTweet" => [
@@ -196,6 +202,12 @@ $mutationType = new ObjectType([
                 ]
             ],
             "resolve" => function ($rootValue, $args, $context) {
+                $tweet = DB::getTweetById($args["tweetId"], $context["db"]);
+                return [
+                    "id" => $tweet["id"],
+                    "text" => $tweet["text"],
+                    "author" => $tweet["author"]
+                ];
             }
         ],
         "unlikeTweet" => [
@@ -206,6 +218,12 @@ $mutationType = new ObjectType([
                 ]
             ],
             "resolve" => function ($rootValue, $args, $context) {
+                $tweet = DB::getTweetById($args["tweetId"], $context["db"]);
+                return [
+                    "id" => $tweet["id"],
+                    "text" => $tweet["text"],
+                    "author" => $tweet["author"]
+                ];
             }
         ],
         "retweet" => [
@@ -216,6 +234,17 @@ $mutationType = new ObjectType([
                 ]
             ],
             "resolve" => function ($rootValue, $args, $context) {
+                $tweet = DB::getTweetById($args["tweetId"], $context["db"]);
+                $newTweet = DB::createTweet([
+                    "text" => $tweet["text"],
+                    "userId" => $args["userId"]
+                ], $context["db"]);
+
+                return [
+                    "id" => $newTweet->getId(),
+                    "text" => $newTweet->getText(),
+                    "author" => $newTweet->getAuthor()->getId()
+                ];
             }
         ],
         "deleteTweet" => [
@@ -226,6 +255,8 @@ $mutationType = new ObjectType([
                 ]
             ],
             "resolve" => function ($rootValue, $args, $context) {
+                DB::deleteTweet($args["tweetId"], $context["db"]);
+                return true;
             }
         ]
     ]

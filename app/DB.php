@@ -80,4 +80,13 @@ class DB
         $user = self::getUserById($tweet["author"], $db);
         return Tweet::createTweet($id, $tweet["text"], User::createUser($user["id"], $user["username"], $user["name"]));
     }
+
+    public static function deleteTweet(string $id, PDO $db): bool
+    {
+        $stmt = $db->prepare(
+            "DELETE FROM tweets WHERE id = ?"
+        );
+        $stmt->execute([$id]);
+        return true;
+    }
 }
