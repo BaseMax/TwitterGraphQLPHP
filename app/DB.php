@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Tweet;
 use App\Models\User;
 use PDO;
 
@@ -61,5 +62,22 @@ class DB
         $user = self::getUserById($id, $db);
 
         return User::createUser($id, $user["username"], $user["name"]);
+    }
+
+    public static function createTweet(array $data, PDO $db): Tweet|null
+    {
+        $id = uniqid();
+        $stmt = $db->prepare(
+            "INSERT INTO tweets (id, text, author) VALUES (?, ?, ?)"
+        );
+        $stmt->execute([
+            $id,
+            $data["text"],
+            $data["userId"]
+        ]);
+
+        $tweet = self::getTweetById($id, $db);
+        $user = self::getUserById($tweet["author"], $db);
+        return Tweet::createTweet($id, $tweet["text"], User::createUser($user["id"], $user["username"], $user["name"]));
     }
 }

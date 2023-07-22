@@ -153,6 +153,13 @@ $mutationType = new ObjectType([
                 ]
             ],
             "resolve" => function ($rootValue, $args, $context) {
+                $input = $args["input"];
+                $tweet = DB::createTweet($input, $context["db"]);
+                return [
+                    "id" => $tweet->getId(),
+                    "text" => $tweet->getText(),
+                    "author" => $tweet->getAuthor()->getId()
+                ];
             }
         ],
         "followUser" => [
@@ -163,6 +170,12 @@ $mutationType = new ObjectType([
                 ]
             ],
             "resolve" => function ($rootValue, $args, $context) {
+                $user = DB::getUserById($args["userId"], $context["db"]);
+                return [
+                    "id" => $user["id"],
+                    "name" => $user["name"],
+                    "username" => $user["username"]
+                ];
             }
         ],
         "unfollowUser" => [
