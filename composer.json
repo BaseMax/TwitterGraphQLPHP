@@ -16,6 +16,8 @@
         "vlucas/phpdotenv": "^5.5",
         "webonyx/graphql-php": "^15.5",
         "illuminate/database": "^10.15",
-        "predis/predis": "^2.2"
+        "predis/predis": "^2.2",
+        "phpunit/phpunit": "^10.2",
+        "guzzlehttp/guzzle": "^7.7"
     }
 }
