@@ -201,6 +201,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer YOUR_
 ```
 
 ## Graphical Examples:
+
 ![Screenshot from 2023-07-22 15-27-32](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/0a9f40b0-f95a-4a82-a1dd-909350ad7ed1)
 ![Screenshot from 2023-07-22 17-26-50](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/c2fabb93-cc84-4033-ab67-7b6b2cad7446)
 ![Screenshot from 2023-07-22 17-36-35](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/dfe41c95-18ad-4e45-bf3b-f7545b410ac1)
@@ -212,8 +213,6 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer YOUR_
 ![Screenshot from 2023-07-22 19-00-37](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/e6af708b-a933-496f-afd6-a2c9152690aa)
 ![Screenshot from 2023-07-22 22-00-09](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/104ba151-ea86-4e9d-a007-864e3269f54c)
 
-
-
 Make sure to replace YOUR_API_URL with the actual URL of your GraphQL API endpoint and YOUR_AUTH_TOKEN with a valid authentication token obtained from the login mutation, if required.
 
 ## Documentation
@@ -224,4 +223,9 @@ For more information on the API's schema, queries, and mutations, you can access
 
 Contributions to the Twitter Clone API project are welcome.
 
-Copyright 2023, Max Base, Ali Ahmadi
+**Authors:**
+
+- Ali Ahmadi
+- Max Base
+
+Copyright 2023, Max Base
