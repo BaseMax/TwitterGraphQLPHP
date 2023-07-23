@@ -201,16 +201,17 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer YOUR_
 ```
 
 ## Graphical Examples:
-![Screenshot from 2023-07-22 15-27-32](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/f6b3c6dc-aee6-4275-8adf-cf33c07eb8cf)
-![Screenshot from 2023-07-22 17-26-50](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/32a82d3d-9d48-4c91-bb90-a1a3c9681716)
-![Screenshot from 2023-07-22 17-36-35](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/a57959f6-bdd6-4fbc-9f32-001aca4bb6c7)
-![Screenshot from 2023-07-22 17-42-20](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/a1b834f9-0b80-4f46-a646-d0bbdefe1d0e)
-![Screenshot from 2023-07-22 18-10-35](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/2bb0fbeb-2f89-4c97-ab19-ed4b32a43ac0)
-![Screenshot from 2023-07-22 18-19-03](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/c0b4132f-0296-4bb9-a475-fab25ba74d33)
-![Screenshot from 2023-07-22 18-32-00](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/af6a0768-5f9f-4364-86c9-bb36a66cd811)
-![Screenshot from 2023-07-22 18-39-54](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/b7d48595-d524-4e7b-bf16-4ba455c3791a)
-![Screenshot from 2023-07-22 19-00-37](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/689e5000-cba5-49c5-8f39-69fb16e693ff)
-![Screenshot from 2023-07-22 22-00-09](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/9a480b5a-03e1-4064-a023-387cebf5cdd5)
+![Screenshot from 2023-07-22 15-27-32](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/0a9f40b0-f95a-4a82-a1dd-909350ad7ed1)
+![Screenshot from 2023-07-22 17-26-50](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/c2fabb93-cc84-4033-ab67-7b6b2cad7446)
+![Screenshot from 2023-07-22 17-36-35](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/dfe41c95-18ad-4e45-bf3b-f7545b410ac1)
+![Screenshot from 2023-07-22 17-42-20](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/baba1e98-cca5-400b-bd4d-38660dac224e)
+![Screenshot from 2023-07-22 18-10-35](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/f4976723-f52e-47bb-9188-4d35df053a41)
+![Screenshot from 2023-07-22 18-19-03](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/fcb89741-ce48-4c83-a56e-88a77e936a5c)
+![Screenshot from 2023-07-22 18-32-00](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/255fc790-80ea-4f11-92d9-587650307e39)
+![Screenshot from 2023-07-22 18-39-54](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/52561a3a-e010-4bbd-ad06-ce74717371be)
+![Screenshot from 2023-07-22 19-00-37](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/e6af708b-a933-496f-afd6-a2c9152690aa)
+![Screenshot from 2023-07-22 22-00-09](https://github.com/BaseMax/TwitterGraphQLPHP/assets/107758775/104ba151-ea86-4e9d-a007-864e3269f54c)
+
 
 
 Make sure to replace YOUR_API_URL with the actual URL of your GraphQL API endpoint and YOUR_AUTH_TOKEN with a valid authentication token obtained from the login mutation, if required.
