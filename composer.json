@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-        "firebase/php-jwt": "^6.8",
+        "firebase/php-jwt": "^7.0",
         "vlucas/phpdotenv": "^5.5",
         "webonyx/graphql-php": "^15.5",
         "illuminate/database": "^10.15",
