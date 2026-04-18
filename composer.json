@@ -17,7 +17,7 @@
         "webonyx/graphql-php": "^15.5",
         "illuminate/database": "^10.15",
         "predis/predis": "^2.2",
-        "phpunit/phpunit": "^10.2",
+        "phpunit/phpunit": "^12.5",
         "guzzlehttp/guzzle": "^7.7"
     }
 }
